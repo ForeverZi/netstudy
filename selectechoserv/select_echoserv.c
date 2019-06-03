@@ -70,7 +70,6 @@ int selectPoll(fd_set *toRead, struct timeval timeout, int *fd_max, char *buf, i
 int prepareServSock(char *port){
     int serv_sock;
     struct sockaddr_in serv_addr;
-    fd_set toRead, temp;
     serv_sock = socket(PF_INET, SOCK_STREAM, 0);
     if(serv_sock==-1){
         error_handling("socket() error");
